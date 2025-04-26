@@ -1,0 +1,117 @@
+/*1.Користувач вводить число, зробіть виведіть суму чисел у діапазоні від 0 до число_користувача. Зробіть перевірку що користувач не може ввести значення менше 1.
+Якщо користувач вводить менше чим 1 то просите ввести число ще раз до поки користувач не введе значення за умовою.*/
+//рішення
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number (>= 1): ";
+    cin >> num;
+    while (num < 1) {
+        cout << "Please enter a number greater than or equal to 1: ";
+        cin >> num;
+    }
+    int sum = 0;
+    for (int i = 0; i <= num; i++) {
+        sum += i;
+    }
+    cout << "Sum from 0 to " << num << " is: " << sum << endl;
+return 0;
+}
+
+/*2) Вивести факторіал числа яке введе користувач. Перевірка на введення так само як і в завданні 1.*/
+
+//рфшення
+
+
+#include <iostream>>
+using namespace std;
+int main() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+    while (number < 1) {
+		cout << "Please enter a number greater than or equal to 1: ";
+        cin >> number;
+    }
+    int factorial = 1;
+	for (int i = 0; i <= number; i++) {
+	    factorial *= i;
+	}
+    cout << "Factorial of " << number << " is: " << factorial << endl;
+	return 0;
+
+}
+
+/*3) Вивести таблицю множення над числом яке введе користувач. Вивести у наступному форматі:
+1 * 1 = 1
+1 * 2 = 2*/
+
+// рішення
+
+#include <iostream>
+using namespace std;
+int main() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+    int multiplication;
+    for (int i = 1;i <= 10; i++) {
+		multiplication = number * i;
+        cout << number << " * " << i << " = " << multiplication << endl;
+    }
+    return 0;
+}
+
+
+/*Намалюйте горизонтальну лінію. Ширину запитати у користувача. Перевірка число не має бути менше 1.
+Додайте колір для фону та тексту.*/
+
+//рішення
+
+#include <iostream>
+using namespace std;
+int main() {
+    int width;
+    cout << "Enter the width: ";
+    cin >> width;
+	while (width < 1) {
+		cout << "Please enter a width greater than or equal to 1: ";
+		cin >> width;
+	}
+	cout << "\033[1;31m"; 
+	cout << "\033[48;5;82m"; 
+	for (int i = 0; i < width; i++) {
+		cout << " - ";
+	}
+	cout << "\033[0m"; 
+	cout << endl;
+	return 0;
+
+}
+
+
+/* Намалюйте вертикальну лінію. Висоту запитати у користувача. Перевірка число не має бути менше 
+1. Додайте колір для фону та тексту.*/
+//рішення
+
+#include <iostream>
+using namespace std;
+int main() {
+    int height;
+    cout << "Enter the height: ";
+    cin >> height;
+    while (height < 1) {
+        cout << "Please enter a height greater than or equal to 1: ";
+        cin >> height;
+    }
+    cout << "\033[1;31m";
+    cout << "\033[48;5;82m";
+    for (int i = 0; i < height; i++) {
+        cout << "|" << endl;
+    }
+    cout << "\033[0m";
+    cout << endl;
+    return 0;
+}
